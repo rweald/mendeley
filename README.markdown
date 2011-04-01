@@ -3,6 +3,8 @@ This is a simple ruby wrapper for the mendeley api
 You can find details about the mendeley API here:
 (http://apidocs.mendeley.com/home/public-resources)
 
+#Installation
+    gem install mendeley
 #Usage
 Before you can use the gem you will need to get a consumer key from the
 mendeley website
