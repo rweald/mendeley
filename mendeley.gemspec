@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "mendeley"
   s.version     = Mendeley::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
-  s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.authors     = ["Ryan Weald"]
+  s.email       = ["ryan@weald.com"]
+  s.homepage    = "http://isurfsoftware.com"
+  s.summary     = %q{"A simple ruby wrapper for the mendeley api"}
+  s.description = %q{"Pending"}
 
   s.rubyforge_project = "mendeley"
 
@@ -18,4 +18,9 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
+
+  s.add_development_dependency 'rspec'
+  s.add_development_dependency 'mocha'
+  s.add_dependency 'rest-client'
+  s.add_dependency 'yajl-ruby'
 end
