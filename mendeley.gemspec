@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["ryan@weald.com"]
   s.homepage    = "http://isurfsoftware.com"
   s.summary     = %q{"A simple ruby wrapper for the mendeley api"}
-  s.description = %q{"Pending"}
+  s.description = %q{"Currently supports the public documents api for search and detailed view"}
 
   s.rubyforge_project = "mendeley"
 
