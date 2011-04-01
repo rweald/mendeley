@@ -1,7 +1,11 @@
 require 'spec_helper'
 
 describe "Mendeley" do
-  it "should do something" do
-    true.should be_true
+  it "should have a version" do
+    Mendeley::VERSION.should be
+  end
+
+  it "should have a API submodule" do
+    Mendeley.constants.include?("API")
   end
 end
