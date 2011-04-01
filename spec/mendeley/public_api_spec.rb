@@ -15,7 +15,7 @@ describe "Mendeley" do
       end
 
       describe ".search" do
-        it "should return the search string for marcio" do
+        it "should search documents for the string for marcio" do
           response = JSON.generate({:result => "success"})
           RestClient.expects(:get).with() do |request| 
             request.should == "http://api.mendeley.com/oapi/documents/search/marcio%20von%20muhlen?consumer_key="
