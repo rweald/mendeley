@@ -14,3 +14,6 @@ Now you can make requests to the mendeley api.
 
 To do a search simply the use document search class method
     Mendeley::API::Documents.search(term)
+
+To get detailed information on a document:
+    Mendeley::API.Documents.document_details(< doc_id>)
