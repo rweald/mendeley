@@ -28,9 +28,11 @@ module Mendeley
     # response json from the mendeley api
     class Documents
       class << self
-        extend Mendeley::API
+        extend API
       end
+
       @base_url = "http://api.mendeley.com/oapi/documents/"
+
       def self.base_url
         @base_url
       end
@@ -39,6 +41,7 @@ module Mendeley
       def self.search(term)
         request(File.join("search", URI.escape(term)))
       end
+
     end
   end
 end
