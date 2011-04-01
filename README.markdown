@@ -4,9 +4,9 @@ You can find details about the mendeley API here:
 (http://apidocs.mendeley.com/home/public-resources)
 
 #Usage
-Before you can use the gem you will need to get a consumer key from
-mendeley website. 
--
+Before you can use the gem you will need to get a consumer key from the
+mendeley website
+
 The first step is to define your consumer key:
     Mendeley.consumer_key = "<Your key here>"
 
