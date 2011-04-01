@@ -28,7 +28,7 @@ module Mendeley
     # response json from the mendeley api
     class Documents
       class << self
-        extend API
+        extend Mendeley::API
       end
       @base_url = "http://api.mendeley.com/oapi/documents/"
       def self.base_url
@@ -37,7 +37,7 @@ module Mendeley
 
       #Search all documents using the public API for the given term
       def self.search(term)
-        self.request(File.join("search", URI.escape(term)))
+        request(File.join("search", URI.escape(term)))
       end
     end
   end
