@@ -1,7 +1,7 @@
 first_run = true
 def run_test_suite
   puts ("rspec spec/")
-  result = %x[rspec --color spec/]
+  result = %x[rspec spec/]
   send_growl_notification(result)
   puts result
 end
