@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Ryan Weald"]
   s.email       = ["ryan@weald.com"]
-  s.homepage    = "http://isurfsoftware.com"
+  s.homepage    = "http://github.com/rweald/mendeley"
   s.summary     = %q{A simple ruby wrapper for the mendeley api}
   s.description = %q{A simple ruby wrapper for the mendeley api}
 
