@@ -25,6 +25,10 @@ module Mendeley
       def self.base_url
         @base_url
       end
+
+      def self.search(term)
+        self.request(File.join("search", URI.escape(term)))
+      end
     end
   end
 end
