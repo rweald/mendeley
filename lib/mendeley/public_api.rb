@@ -13,7 +13,7 @@ module Mendeley
 
       def build_request_url(sub_url, params)
         request_url = File.join(self.class.base_url, sub_url)
-        param_string = ""
+        param_string = "?consumer_key=#{Mendeley.consumer_key}"
         params.each do |key,value|
           param_string << "&#{key}=#{value}"
         end
