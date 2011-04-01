@@ -26,6 +26,20 @@ describe "Mendeley" do
           Documents.search("marcio von muhlen")
         end
       end
+
+      describe ".document_details" do
+        it "should return the details of a document do" do
+          response = JSON.generate({:result => "success"})
+          RestClient.expects(:get).with() do |request| 
+            request.should == "http://api.mendeley.com/oapi/documents/details/15?consumer_key="
+          end.returns(response)
+          Documents.document_details("15")
+        end
+
+        it "should throw an exception if the id is not a string" do
+          lambda{Documents.document_details(15)}.should raise_error
+        end
+      end
     end
   end
 end

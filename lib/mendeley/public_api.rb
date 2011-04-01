@@ -27,9 +27,7 @@ module Mendeley
     # All Responses will be a ruby hash created by parsing the 
     # response json from the mendeley api
     class Documents
-      class << self
-        extend API
-      end
+      extend API
 
       @base_url = "http://api.mendeley.com/oapi/documents/"
 
@@ -42,6 +40,13 @@ module Mendeley
         request(File.join("search", URI.escape(term)))
       end
 
+      #Fetch the detailed description of the document from mendeley
+      def self.document_details(doc_id)
+        unless doc_id.is_a?(String)
+          raise "Invalid argument type. Must be a string"
+        end
+        request(File.join("details", URI.escape(doc_id)))
+      end
     end
   end
 end
