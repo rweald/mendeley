@@ -47,6 +47,12 @@ module Mendeley
         end
         request(File.join("details", URI.escape(doc_id)))
       end
+
+      def self.authored_by(name)
+        request(File.join("authored", URI.escape(name)))
+      end
+
     end
+
   end
 end

@@ -27,6 +27,16 @@ describe "Mendeley" do
         end
       end
 
+      describe ".authored_by" do
+        it "should search for document with a given author" do
+          response = JSON.generate({:result => "success"})
+          RestClient.expects(:get).with() do |request| 
+            request.should == "http://api.mendeley.com/oapi/documents/authored/marcio%20von%20muhlen?consumer_key="
+          end.returns(response)
+          Documents.authored_by("marcio von muhlen")
+        end
+      end
+
       describe ".document_details" do
         it "should return the details of a document do" do
           response = JSON.generate({:result => "success"})
@@ -40,6 +50,7 @@ describe "Mendeley" do
           lambda{Documents.document_details(15)}.should raise_error
         end
       end
+
     end
   end
 end
